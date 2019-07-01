@@ -34,8 +34,8 @@
             }
         ],
         "post-install": [
-            "install -Dm644 org.gnome.Pinpoint.png /app/share/icons/hicolor/scalable/apps/org.gnome.Pinpoint.svg",
-            "install -Dm644 org.gnome.Pinpoint.png /app/share/desktop/org.gnome.Pinpoint.desktop",
+            "install -Dm644 org.gnome.Pinpoint.svg /app/share/icons/hicolor/scalable/apps/org.gnome.Pinpoint.svg",
+            "install -Dm644 org.gnome.Pinpoint.desktop /app/share/applications/org.gnome.Pinpoint.desktop",
             "install -Dm644 org.gnome.Pinpoint.appdata.xml /app/share/appdata/org.gnome.Pinpoint.appdata.xml"           
         ]
     }
