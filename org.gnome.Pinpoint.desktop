@@ -1,10 +1,9 @@
 [Desktop Entry]
-Version=0.1.18
 Type=Application
 Terminal=true
 Name=Pinpoint
 TryExec=pinpoint
 Exec=pinpoint
-Icon=org.gnome.Pinpoint.png
+Icon=org.gnome.Pinpoint
 Categories=ConsoleOnly;Presentation;Office;
 
