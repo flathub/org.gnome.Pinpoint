@@ -1,11 +1,11 @@
 {
     "id": "org.gnome.Pinpoint",
     "runtime": "org.gnome.Platform",
-    "runtime-version": "3.32",
+    "runtime-version": "3.34",
     "sdk": "org.gnome.Sdk",
     "command": "pinpoint",
     "finish-args": [
-            "--share=ipc", "--socket=x11",
+            "--share=ipc", "--socket=fallback-x11",
             "--device=dri",
             "--socket=wayland",
             "--filesystem=home"
@@ -26,7 +26,7 @@
             },
             {
                 "type": "file",
-                "path": "org.gnome.Pinpoint.appdata.xml"
+                "path": "org.gnome.Pinpoint.metainfo.xml"
             },
             {
                 "type": "file",
@@ -34,9 +34,9 @@
             }
         ],
         "post-install": [
-            "install -Dm644 org.gnome.Pinpoint.svg /app/share/icons/hicolor/scalable/apps/org.gnome.Pinpoint.svg",
-            "install -Dm644 org.gnome.Pinpoint.desktop /app/share/applications/org.gnome.Pinpoint.desktop",
-            "install -Dm644 org.gnome.Pinpoint.appdata.xml /app/share/appdata/org.gnome.Pinpoint.appdata.xml"           
+            "install -Dm644 ${FLATPAK_ID}.svg /app/share/icons/hicolor/scalable/apps/${FLATPAK_ID}.svg",
+            "install -Dm644 ${FLATPAK_ID}.desktop /app/share/applications/${FLATPAK_ID}.desktop",
+            "install -Dm644 ${FLATPAK_ID}.metainfo.xml /app/share/metainfo/${FLATPAK_ID}.metainfo.xml"           
         ]
     }
     ]
