@@ -1,43 +1,135 @@
 {
     "id": "org.gnome.Pinpoint",
     "runtime": "org.gnome.Platform",
-    "runtime-version": "3.38",
+    "runtime-version": "42",
     "sdk": "org.gnome.Sdk",
     "command": "pinpoint",
     "finish-args": [
-            "--share=ipc", "--socket=fallback-x11",
-            "--device=dri",
-            "--socket=wayland",
-            "--filesystem=home"
+        "--share=ipc",
+        "--socket=fallback-x11",
+        "--device=dri",
+        "--socket=wayland",
+        "--filesystem=home"
     ],
     "modules": [
-    {
-        "name": "pinpoint",
-        "config-opts": [ "--enable-cluttergst", "--enable-pdf", "--enable-rsvg"  ],
-        "sources": [
-            {
-                "type": "archive",
-                "url": "http://ftp.acc.umu.se/pub/GNOME/sources/pinpoint/0.1/pinpoint-0.1.8.tar.xz",
-                "sha256": "5a207dd1a35681b7268e6aa5ff9b2c5381f4cc63e5f2e5695997ca9d3264e8ca"
-            },
-            {
-                "type": "file",
-                "path": "org.gnome.Pinpoint.desktop"
-            },
-            {
-                "type": "file",
-                "path": "org.gnome.Pinpoint.metainfo.xml"
-            },
-            {
-                "type": "file",
-                "path": "org.gnome.Pinpoint.svg"
-            }
-        ],
-        "post-install": [
-            "install -Dm644 ${FLATPAK_ID}.svg /app/share/icons/hicolor/scalable/apps/${FLATPAK_ID}.svg",
-            "install -Dm644 ${FLATPAK_ID}.desktop /app/share/applications/${FLATPAK_ID}.desktop",
-            "install -Dm644 ${FLATPAK_ID}.metainfo.xml /app/share/metainfo/${FLATPAK_ID}.metainfo.xml"           
-        ]
-    }
+        {
+            "name": "cogl",
+            "config-opts": [
+                "--disable-cogl-gst",
+                "--disable-maintainer-flags",
+                "--enable-xlib-egl-platform",
+                "--enable-wayland-egl-platform",
+                "--enable-wayland-egl-server"
+            ],
+            "cleanup": [
+                "/include",
+                "/lib/*.la",
+                "/lib/pkgconfig",
+                "/share/gir-1.0",
+                "/share/cogl"
+            ],
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "https://gitlab.gnome.org/GNOME/cogl",
+                    "branch": "cogl-1.22"
+                }
+            ]
+        },
+        {
+            "name": "clutter",
+            "config-opts": [
+                "--enable-installed-tests",
+                "--disable-maintainer-flags",
+                "--enable-egl-backend",
+                "--enable-evdev-input",
+                "--enable-wayland-backend",
+                "--enable-wayland-compositor",
+                "--enable-gdk-backend"
+            ],
+            "cleanup": [
+                "/include",
+                "/lib/*.la",
+                "/lib/pkgconfig",
+                "/share/gir-1.0",
+                "/share/gtk-doc",
+                "/share/clutter-1.0",
+                "/share/installed-tests",
+                "/libexec"
+            ],
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "http://ftp.acc.umu.se/pub/GNOME/sources/clutter/1.26/clutter-1.26.4.tar.xz",
+                    "sha256": "8b48fac159843f556d0a6be3dbfc6b083fc6d9c58a20a49a6b4919ab4263c4e6"
+                }
+            ]
+        },
+        {
+            "name": "clutter-gst",
+            "cleanup": [
+                "/include",
+                "/lib/*.la",
+                "/lib/pkgconfig",
+                "/share/gir-1.0",
+                "/share/gtk-doc"
+            ],
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "http://ftp.acc.umu.se/pub/GNOME/sources/clutter-gst/3.0/clutter-gst-3.0.27.tar.xz",
+                    "sha256": "fe69bd6c659d24ab30da3f091eb91cd1970026d431179b0724f13791e8ad9f9d"
+                }
+            ]
+        },
+        {
+            "name": "clutter-gtk",
+            "cleanup": [
+                "/include",
+                "/lib/*.la",
+                "/lib/pkgconfig",
+                "/share/gir-1.0",
+                "/share/gtk-doc"
+            ],
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "http://ftp.acc.umu.se/pub/GNOME/sources/clutter-gtk/1.8/clutter-gtk-1.8.4.tar.xz",
+                    "sha256": "521493ec038973c77edcb8bc5eac23eed41645117894aaee7300b2487cb42b06"
+                }
+            ]
+        },
+        {
+            "name": "pinpoint",
+            "config-opts": [
+                "--enable-cluttergst",
+                "--enable-pdf",
+                "--enable-rsvg"
+            ],
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "http://ftp.acc.umu.se/pub/GNOME/sources/pinpoint/0.1/pinpoint-0.1.8.tar.xz",
+                    "sha256": "5a207dd1a35681b7268e6aa5ff9b2c5381f4cc63e5f2e5695997ca9d3264e8ca"
+                },
+                {
+                    "type": "file",
+                    "path": "org.gnome.Pinpoint.desktop"
+                },
+                {
+                    "type": "file",
+                    "path": "org.gnome.Pinpoint.metainfo.xml"
+                },
+                {
+                    "type": "file",
+                    "path": "org.gnome.Pinpoint.svg"
+                }
+            ],
+            "post-install": [
+                "install -Dm644 ${FLATPAK_ID}.svg /app/share/icons/hicolor/scalable/apps/${FLATPAK_ID}.svg",
+                "install -Dm644 ${FLATPAK_ID}.desktop /app/share/applications/${FLATPAK_ID}.desktop",
+                "install -Dm644 ${FLATPAK_ID}.metainfo.xml /app/share/metainfo/${FLATPAK_ID}.metainfo.xml"
+            ]
+        }
     ]
 }
