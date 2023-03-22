@@ -31,8 +31,8 @@
             "sources": [
                 {
                     "type": "git",
-                    "url": "https://gitlab.gnome.org/GNOME/cogl",
-                    "branch": "cogl-1.22"
+                    "url": "https://gitlab.gnome.org/Archive/cogl",
+                    "tag": "61d966c7442d521e38572b7f93ac7b8973a9c65e"
                 }
             ]
         },
