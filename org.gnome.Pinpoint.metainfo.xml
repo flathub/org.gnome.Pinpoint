@@ -43,7 +43,7 @@ and small amounts of concise text in slides. Some of pinpoints core features are
 
   <provides>
     <binary>pinpoint</binary>
-  </provides
+  </provides>
   <launchable type="desktop-id">org.gnome.Pinpoint.desktop</launchable>
   <releases>
     <release version="0.1.8" date="2015-09-22" />
