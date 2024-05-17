@@ -7,7 +7,7 @@
   <content_rating type="oars-1.1" />
 
   <name>Pinpoint</name>
-  <summary>Help hackers give excellent presentations</summary>
+  <summary>Excellent presentations for hackers</summary>
   <description>
     <p>
        Pinpoint a simple presentation tool that hopes to avoid audience death by
@@ -32,6 +32,7 @@ and small amounts of concise text in slides. Some of pinpoints core features are
   <screenshots>
     <screenshot type="default">
       <image>https://raw.githubusercontent.com/nedrichards/pinpoint-flatpak/master/pinpoint-screenshot.png</image>
+      <caption>An opinionated set of options can lead to nice results, simply.</caption>
     </screenshot>
   </screenshots>
 
