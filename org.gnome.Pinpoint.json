@@ -60,7 +60,7 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "http://ftp.acc.umu.se/pub/GNOME/sources/clutter/1.26/clutter-1.26.4.tar.xz",
+                    "url": "https://download.gnome.org/sources/clutter/1.26/clutter-1.26.4.tar.xz",
                     "sha256": "8b48fac159843f556d0a6be3dbfc6b083fc6d9c58a20a49a6b4919ab4263c4e6"
                 }
             ]
@@ -77,7 +77,7 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "http://ftp.acc.umu.se/pub/GNOME/sources/clutter-gst/3.0/clutter-gst-3.0.27.tar.xz",
+                    "url": "https://download.gnome.org/sources/clutter-gst/3.0/clutter-gst-3.0.27.tar.xz",
                     "sha256": "fe69bd6c659d24ab30da3f091eb91cd1970026d431179b0724f13791e8ad9f9d"
                 }
             ]
@@ -94,7 +94,7 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "http://ftp.acc.umu.se/pub/GNOME/sources/clutter-gtk/1.8/clutter-gtk-1.8.4.tar.xz",
+                    "url": "https://download.gnome.org/sources/clutter-gtk/1.8/clutter-gtk-1.8.4.tar.xz",
                     "sha256": "521493ec038973c77edcb8bc5eac23eed41645117894aaee7300b2487cb42b06"
                 }
             ]
@@ -109,7 +109,7 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "http://ftp.acc.umu.se/pub/GNOME/sources/pinpoint/0.1/pinpoint-0.1.8.tar.xz",
+                    "url": "https://download.gnome.org/sources/pinpoint/0.1/pinpoint-0.1.8.tar.xz",
                     "sha256": "5a207dd1a35681b7268e6aa5ff9b2c5381f4cc63e5f2e5695997ca9d3264e8ca"
                 },
                 {
