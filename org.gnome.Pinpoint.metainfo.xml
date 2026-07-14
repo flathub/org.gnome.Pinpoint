@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Copyright 2019 Nick Richards -->
-<component type="console-application">
+<component type="desktop-application">
   <id>org.gnome.Pinpoint</id>
   <metadata_license>CC0-1.0</metadata_license>
-  <project_license>LGPL-2.1</project_license>
+  <project_license>LGPL-2.1-or-later</project_license>
   <content_rating type="oars-1.1" />
 
   <name>Pinpoint</name>
@@ -31,14 +31,17 @@ and small amounts of concise text in slides. Some of pinpoints core features are
 
   <screenshots>
     <screenshot type="default">
-      <image>https://raw.githubusercontent.com/nedrichards/pinpoint-flatpak/master/pinpoint-screenshot.png</image>
+      <image>https://raw.githubusercontent.com/nedrichards/pinpoint-flatpak/0a103a64484236ade4f7ca60f493a74afa4e2bd7/pinpoint-screenshot.png</image>
       <caption>An opinionated set of options can lead to nice results, simply.</caption>
     </screenshot>
   </screenshots>
 
-  <url type="homepage">https://wiki.gnome.org/action/show/Attic/Pinpoint</url>
+  <url type="homepage">https://wiki.gnome.org/Attic%282f%29Pinpoint.html</url>
+  <url type="vcs-browser">https://gitlab.gnome.org/Archive/pinpoint</url>
 
-  <developer_name>GNOME</developer_name>
+  <developer id="org.gnome">
+    <name>GNOME</name>
+  </developer>
   <update_contact>nick_at_nedrichards.com</update_contact>
 
   <provides>
