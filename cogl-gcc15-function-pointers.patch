@@ -1,0 +1,36 @@
+diff --git a/cogl-path/cogl-path.c b/cogl-path/cogl-path.c
+--- a/cogl-path/cogl-path.c
++++ b/cogl-path/cogl-path.c
+@@ -1355,17 +1355,17 @@ _cogl_path_build_fill_attribute_buffer (CoglPath *path)
+                      GLU_TESS_WINDING_NONZERO);
+-
+-  /* All vertices are on the xy-plane */
+-  gluTessNormal (tess.glu_tess, 0.0, 0.0, 1.0);
+-
+-  gluTessCallback (tess.glu_tess, GLU_TESS_BEGIN_DATA,
+-                   _cogl_path_tesselator_begin);
+-  gluTessCallback (tess.glu_tess, GLU_TESS_VERTEX_DATA,
+-                   _cogl_path_tesselator_vertex);
+-  gluTessCallback (tess.glu_tess, GLU_TESS_END_DATA,
+-                   _cogl_path_tesselator_end);
+-  gluTessCallback (tess.glu_tess, GLU_TESS_COMBINE_DATA,
+-                   _cogl_path_tesselator_combine);
+-
+-  gluTessBeginPolygon (tess.glu_tess, &tess);
+-
++
++  /* All vertices are on the xy-plane */
++  gluTessNormal (tess.glu_tess, 0.0, 0.0, 1.0);
++
++  gluTessCallback (tess.glu_tess, GLU_TESS_BEGIN_DATA,
++                   (_GLUfuncptr *) _cogl_path_tesselator_begin);
++  gluTessCallback (tess.glu_tess, GLU_TESS_VERTEX_DATA,
++                   (_GLUfuncptr *) _cogl_path_tesselator_vertex);
++  gluTessCallback (tess.glu_tess, GLU_TESS_END_DATA,
++                   (_GLUfuncptr *) _cogl_path_tesselator_end);
++  gluTessCallback (tess.glu_tess, GLU_TESS_COMBINE_DATA,
++                   (_GLUfuncptr *) _cogl_path_tesselator_combine);
++
++  gluTessBeginPolygon (tess.glu_tess, &tess);
++
+   while (path_start < data->path_nodes->len)
