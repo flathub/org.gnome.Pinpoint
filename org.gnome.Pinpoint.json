@@ -1,7 +1,7 @@
 {
     "id": "org.gnome.Pinpoint",
     "runtime": "org.gnome.Platform",
-    "runtime-version": "49",
+    "runtime-version": "50",
     "sdk": "org.gnome.Sdk",
     "command": "pinpoint",
     "finish-args": [
@@ -32,14 +32,17 @@
                 {
                     "type": "git",
                     "url": "https://gitlab.gnome.org/Archive/cogl",
-                    "tag": "61d966c7442d521e38572b7f93ac7b8973a9c65e"
+                    "commit": "61d966c7442d521e38572b7f93ac7b8973a9c65e"
+                },
+                {
+                    "type": "patch",
+                    "path": "cogl-gcc15-function-pointers.patch"
                 }
             ]
         },
         {
             "name": "clutter",
             "config-opts": [
-                "--enable-installed-tests",
                 "--disable-maintainer-flags",
                 "--enable-egl-backend",
                 "--enable-evdev-input",
